@@ -89,21 +89,24 @@ def game(board):
     player_two = second_player(player_one)
     display_board(board)
     place_marker(board, player_one)
+    display_board(board)
     while game_on:
 
         place_marker(board, player_two)
         display_board(board)
-        if full_board(board) == False:
-            break
         if win_check(board, player_two) == False:
             break
+        if full_board(board) == False:
+            break
+
 
         place_marker(board, player_one)
         display_board(board)
-        if full_board(board) == False:
-            break
         if win_check(board, player_one) == False:
             break
+        if full_board(board) == False:
+            break
+
 
 
 game(board)
